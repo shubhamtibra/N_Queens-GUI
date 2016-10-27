@@ -70,7 +70,7 @@ public class EightQueensSolver implements Runnable {
 	/**
 	 * Place a queen in the given row and recursively in all rows that follow it.
 	 * @param row the row to place a queen in
-	 * @return true if all the queens coud be placed
+	 * @return true if all the queens could be placed
 	 * @throws InterruptedException if the thread that the solver is running in is interrupted
 	 */
 	private void placeQueens(int row) throws InterruptedException {

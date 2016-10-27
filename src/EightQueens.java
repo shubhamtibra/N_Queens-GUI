@@ -36,14 +36,19 @@ public class EightQueens {
 		JTextField n = new HintTextField("Type here");
                 JLabel userLabel = new JLabel("Number of Queens:");
                 JButton javaButton = new JButton("Solve");
-                
-                userLabel.setBounds(10,20,80,25);
-                n.setBounds(50,20,80,25);
-                javaButton.setBounds(30,40,80,25);
+                JButton exit = new JButton("Exit");
+                exit.addActionListener(new ActionListener() {
+
+			public void actionPerformed(ActionEvent e) {
+				System.exit(0);
+			}
+
+		});
                 
                 root.add(userLabel);
                 root.add(n);
                 root.add(javaButton);
+                root.add(exit);
                 welcome.add(root);
                 
                 welcome.setVisible(true);
@@ -70,7 +75,7 @@ public class EightQueens {
 		startButton.addActionListener(new ActionListener() {
 
 			public void actionPerformed(ActionEvent e) {
-				System.exit(0);	  
+				board.dispose();
 			}
 			
 		});
